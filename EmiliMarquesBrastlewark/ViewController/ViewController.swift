@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         //Parte 2
         // En esta otra parte le pedimos al archivo que lo muestre por pantalla.
-        guard let gnomo = Bundle.main.path(forResource: "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.", ofType: "json") else { return }
+        guard let gnomo = Bundle.main.path(forResource: "https://raw.githubusercontent.com/rrafols/mobile_test/master/data", ofType: "json") else { return }
 
         let url = URL(fileURLWithPath: gnomo)
 
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 //Leeemos el arcvhivo JSON
 private func readJson() {
     do {
-        if let file = Bundle.main.url(forResource: "points", withExtension: "json") {
+        if let file = Bundle.main.url(forResource: "https://raw.githubusercontent.com/rrafols/mobile_test/master/data", withExtension: "json") {
             let data = try Data(contentsOf: file)
             let json = try JSONSerialization.jsonObject(with: data, options: [])
             if let object = json as? [String: Any] {
